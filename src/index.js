@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <Navigation
-        Name = "navigation"
-        Numbers = {[1,2,3,4]} />
+        Name="navigation"
+        Numbers={[1, 2, 3, 4]} />
     </div>
   );
 }
