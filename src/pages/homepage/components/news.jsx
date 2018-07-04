@@ -4,19 +4,29 @@ import Highcharts from "react-highcharts";
 
 let config = {
   chart: {
-    type: 'bar'
+    type: "bar"
   },
   title: {
-    text: 'Analyst Recommendation'
+    text: "Analyst Recommendation"
   },
   xAxis: {
-    categories: ['Siemens', 'RWE', 'Lufthansa', 'Daimler', 'Covestro', 'BMW', 'Adidas', 'Beiersdorf', 'Deutsche Bank']
+    categories: [
+      "Siemens",
+      "RWE",
+      "Lufthansa",
+      "Daimler",
+      "Covestro",
+      "BMW",
+      "Adidas",
+      "Beiersdorf",
+      "Deutsche Bank"
+    ]
   },
   yAxis: {
     min: 0,
     max: 4,
     title: {
-      text: 'Percentage'
+      text: "Percentage"
     }
   },
   legend: {
@@ -24,22 +34,26 @@ let config = {
   },
   plotOptions: {
     series: {
-      stacking: 'normal'
+      stacking: "normal"
     }
   },
-  series: [{
-    name: 'Hold',
-    data: [0, 0, 0, 0, 0, 0, 0, 2.9, 0]
-  }, {
-    name: 'Buy',
-    data: [1.7, 2.1, 2.1, 2.3, 1.9, 2.8, 2, 0, 0]
-  }, {
-    name: 'Sell',
-    data: [0, 0, 0, 0, 0, 0, 0, 0, 3.6]
-  }]
-}
+  series: [
+    {
+      name: "Hold",
+      data: [0, 0, 0, 0, 0, 0, 0, 2.9, 0]
+    },
+    {
+      name: "Buy",
+      data: [1.7, 2.1, 2.1, 2.3, 1.9, 2.8, 2, 0, 0]
+    },
+    {
+      name: "Sell",
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 3.6]
+    }
+  ]
+};
 
-export class Analyst extends React.Component {
+export class News extends React.Component {
   constructor(props) {
     super(props);
   }

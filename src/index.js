@@ -4,14 +4,14 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 import "react-twitter-widgets";
 import { Navigation } from "./navigation/navigation.jsx";
+import { HomePage } from "./pages/homepage/homepage.jsx";
 // var Timeline = require('react-twitter-widgets').Timeline
 
 function App() {
   return (
     <div className="App">
-      <Navigation
-        Name="navigation"
-        Numbers={[1, 2, 3, 4]} />
+      <Navigation />
+      <HomePage />
     </div>
   );
 }
