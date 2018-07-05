@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Button } from "react-bootstrap";
 
 export class NavigationButton extends React.Component {
   constructor(props) {
@@ -11,12 +12,9 @@ export class NavigationButton extends React.Component {
   }
   render() {
     return (
-      <button
-        className={this.props.selected ? "highlighted" : ""}
-        onClick={this.onButtonClick}
-      >
+      <div className={"button"} onClick={this.onButtonClick}>
         {this.props.name}
-      </button>
+      </div>
     );
   }
 }

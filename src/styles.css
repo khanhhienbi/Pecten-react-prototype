@@ -7,3 +7,27 @@
   background-color: lightblue;
 }
 
+.panel {
+  background-color: #284a82;
+  padding-left: 0.75rem;
+}
+
+.button {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  width: 100%;
+  text-align: left;
+  font-size: 0.7rem;
+  color: #f7f7f7;
+  background-color: #6283ba;
+  border-radius: 10px;
+}
+
+.text-left-align {
+  text-align: left;
+}
+
+.table {
+  width: 600px;
+  height: 400px;
+}

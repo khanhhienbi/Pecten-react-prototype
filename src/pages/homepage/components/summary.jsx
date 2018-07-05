@@ -4,26 +4,19 @@ import Highcharts from "react-highcharts";
 
 let config = {
   chart: {
-    type: "pie"
+    type: 'bar'
   },
   title: {
-    text: "Summary"
+    text: 'Stacked bar chart'
   },
   xAxis: {
-    categories: [
-      "Siemens",
-      "RWE",
-      "Lufthansa",
-      "Daimler",
-      "Covestro",
-      "BMW",
-      "Adidas"
-    ]
+    categories: ['Adidas', 'Bayer', 'Beiersdorf', 'BMW', 'Commerzbank','Deutsche Bank']
   },
   yAxis: {
-    min: 0,
+    min: -1,
+    max: 1,
     title: {
-      text: "Percentage"
+      text: ''
     }
   },
   legend: {
@@ -31,24 +24,25 @@ let config = {
   },
   plotOptions: {
     series: {
-      stacking: "normal"
+      stacking: 'normal'
     }
   },
-  series: [
-    {
-      name: "John",
-      data: [5, 3, 4, 7, 2]
-    },
-    {
-      name: "Jane",
-      data: [2, 2, 3, 2, 1]
-    },
-    {
-      name: "Joe",
-      data: [3, 4, 4, 2, 5]
-    }
-  ]
-};
+  series: [{
+    name: 'Twitter Sentiment',
+    data: [0, 0, 0, 0, 2]
+  }, {
+    name: 'News Sentiment',
+    data: [0, 0, -1, 1, 1]
+  }, {
+      name: 'Profitability',
+      data: [1, 0, 1, 1, 1]
+  }, {
+    name: 'Risk',
+    data: [0, 0, 0, 0, 5]
+  }]
+}
+
+
 
 export class Summary extends React.Component {
   constructor(props) {
