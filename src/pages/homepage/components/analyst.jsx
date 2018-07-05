@@ -44,6 +44,6 @@ export class Analyst extends React.Component {
     super(props);
   }
   render() {
-    return <Highcharts config={config} ref="chart"/>;
+    return <Highcharts config={config} ref="chart" />;
   }
 }

@@ -7,7 +7,7 @@ let config = {
     type: "pie"
   },
   title: {
-    text: "Analyst Recommendation"
+    text: "Summary"
   },
   xAxis: {
     categories: [
