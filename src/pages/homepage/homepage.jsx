@@ -4,6 +4,10 @@ import { Tweets } from "./components/tweets.jsx";
 import { Analyst } from "./components/analyst.jsx";
 import { Summary } from "./components/summary.jsx";
 import { News } from "./components/news.jsx";
+import { Grid } from "react-bootstrap";
+import { Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+import { BigQueryAPI } from "../../data/big-query-api";
 
 export class HomePage extends React.Component {
   constructor(props) {
@@ -11,24 +15,26 @@ export class HomePage extends React.Component {
   }
   render() {
     return (
-      <div className="row">
-        <div className="row">
-          <div className="col-xs-6">
+      <Grid>
+        <Row />
+        {BigQueryAPI.description}
+        <Row>
+          <Col xs={6}>
             <Tweets />
-          </div>
-          <div className="col-xs-6">
+          </Col>
+          <Col xs={6}>
             <Analyst />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-xs-6">
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={6}>
             <News />
-          </div>
-          <div className="col-xs-6">
+          </Col>
+          <Col xs={6}>
             <Summary />
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }

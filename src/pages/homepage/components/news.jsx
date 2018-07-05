@@ -1,43 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Highcharts from "react-highcharts";
+import ReactTable from "react-table";
 
-let config = {
-  chart: {
-    type: "bar"
-  },
-  title: {
-    text: "Analyst Recommendation"
-  },
-  xAxis: {
-    categories: [
-      "Siemens",
-      "RWE",
-      "Lufthansa",
-      "Daimler",
-      "Covestro",
-      "BMW",
-      "Adidas",
-      "Beiersdorf",
-      "Deutsche Bank"
-    ]
-  },
-  yAxis: {
-    min: 0,
-    max: 4,
-    title: {
-      text: "Percentage"
-    }
-  },
-  legend: {
-    reversed: true
-  },
-  plotOptions: {
-    series: {
-      stacking: "normal"
-    }
-  },
-  series: [
+let tabledata = [
     {
       name: "Hold",
       data: [0, 0, 0, 0, 0, 0, 0, 2.9, 0]
@@ -50,14 +15,30 @@ let config = {
       name: "Sell",
       data: [0, 0, 0, 0, 0, 0, 0, 0, 3.6]
     }
-  ]
-};
+  ],
+  columns = [
+    {
+      Header: "Name",
+      accessor: "name" // String-based value accessors!
+    },
+    {
+      Header: "Data",
+      accessor: "data" // String-based value accessors!
+    }
+  ];
 
 export class News extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    return <Highcharts config={config} ref="chart" />;
+    return (
+      <ReactTable
+        data={tabledata}
+        columns={columns}
+        defaultPageSize={5}
+        ref="chart"
+      />
+    );
   }
 }
