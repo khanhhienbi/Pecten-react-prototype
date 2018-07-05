@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 import "react-table/react-table.css";
 import "react-twitter-widgets";
+import "bootstrap/dist/css/bootstrap.css";
 import { Navigation } from "./navigation/navigation.jsx";
 import { HomePage } from "./pages/homepage/homepage.jsx";
 // var Timeline = require('react-twitter-widgets').Timeline
