@@ -17,7 +17,7 @@ export class HomePage extends React.Component {
     return (
       <Grid>
         <Row />
-        <Row>
+        <Row style={{ flexWrap: "nowrap" }}>
           <Col xs={6}>
             <Tweets />
           </Col>
@@ -25,12 +25,12 @@ export class HomePage extends React.Component {
             <Analyst />
           </Col>
         </Row>
-        <Row>
-          <Col xs={6}>
-            <News />
-          </Col>
+        <Row style={{ flexWrap: "nowrap" }}>
           <Col xs={6}>
             <Summary />
+          </Col>
+          <Col xs={6}>
+            <News />
           </Col>
         </Row>
       </Grid>
