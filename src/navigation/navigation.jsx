@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { NavigationButton } from "./components/navigationButton.jsx";
 import { Row, Col, Grid } from "react-bootstrap";
+import SideNav, { MenuIcon } from 'react-simple-sidenav';
+
 
 export class Navigation extends React.Component {
   constructor(props) {
@@ -54,5 +56,10 @@ export class Navigation extends React.Component {
         </Row>
       </Grid>
     );
+    
   }
 }
+
+
+
+
