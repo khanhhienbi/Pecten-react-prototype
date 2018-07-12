@@ -4,9 +4,7 @@ import { Tweets } from "./components/tweets.jsx";
 import { Analyst } from "./components/analyst.jsx";
 import { Summary } from "./components/summary.jsx";
 import { News } from "./components/news.jsx";
-import { Grid } from "react-bootstrap";
-import { Row } from "react-bootstrap";
-import { Col } from "react-bootstrap";
+import { Grid, Row, Col } from "react-bootstrap";
 //import { BigQueryAPI } from "../../data/big-query-api";
 
 export class HomePage extends React.Component {
@@ -15,9 +13,8 @@ export class HomePage extends React.Component {
   }
   render() {
     return (
-      <Grid>
-        <Row />
-        <Row style={{ flexWrap: "nowrap" }}>
+      <div className="main">
+        <Row className="row">
           <Col xs={6}>
             <Tweets />
           </Col>
@@ -25,7 +22,7 @@ export class HomePage extends React.Component {
             <Analyst />
           </Col>
         </Row>
-        <Row style={{ flexWrap: "nowrap" }}>
+        <Row className="row">
           <Col xs={6}>
             <Summary />
           </Col>
@@ -33,7 +30,7 @@ export class HomePage extends React.Component {
             <News />
           </Col>
         </Row>
-      </Grid>
+      </div>
     );
   }
 }

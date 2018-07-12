@@ -1,9 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { NavigationButton } from "./components/navigationButton.jsx";
-import { Row, Col, Grid } from "react-bootstrap";
-import SideNav, { MenuIcon } from 'react-simple-sidenav';
-
+import { slide as Menu } from 'react-burger-menu';
+import { Button, Glyphicon } from 'react-bootstrap';
+import "./css/menu.css";
 
 export class Navigation extends React.Component {
   constructor(props) {
@@ -22,7 +20,7 @@ export class Navigation extends React.Component {
   }
   onMarketsSelected() {
     this.setState({
-      pageSelected: "markets"
+      pageSelected: "analyst"
     });
   }
   onFundamentalsSelected() {
@@ -32,31 +30,27 @@ export class Navigation extends React.Component {
   }
   render() {
     return (
-      <Grid>
-        <Row>
-          <NavigationButton
-            name="HomePage"
-            selected={this.state.pageSelected === "home"}
-            onSelected={this.onHomePageSelected}
-          />
-        </Row>
-        <Row>
-          <NavigationButton
-            name="Market"
-            selected={this.state.pageSelected === "markets"}
-            onSelected={this.onMarketsSelected}
-          />
-        </Row>
-        <Row>
-          <NavigationButton
-            name="Fundamentals"
-            selected={this.state.pageSelected === "fundamentals"}
-            onSelected={this.onFundamentalsSelected}
-          />
-        </Row>
-      </Grid>
+      <Menu width={195}>
+      <Button bsSize="large" 
+        className="bm-menu-button"
+        active={this.state.pageSelected === "home"}
+        onSelected={this.onHomePageSelected}>
+        <Glyphicon glyph="home" /> Homepage
+      </Button>
+      <Button bsSize="large"
+        className="bm-menu-button"
+        active={this.state.pageSelected === "analyst"}
+        onSelected={this.onHomePageSelected}>
+        <Glyphicon glyph="list-alt" /> Analyst
+      </Button>
+      <Button bsSize="large"
+        className="bm-menu-button"
+        active={this.state.pageSelected === "fundamentals"}
+        onSelected={this.onHomePageSelected}>
+        <Glyphicon glyph="tasks" /> Fundamentals
+      </Button>
+      </Menu>
     );
-    
   }
 }
 
