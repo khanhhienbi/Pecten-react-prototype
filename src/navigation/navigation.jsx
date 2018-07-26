@@ -1,6 +1,6 @@
 import React from "react";
-import { slide as Menu } from 'react-burger-menu';
-import { Button, Glyphicon } from 'react-bootstrap';
+import { slide as Menu } from "react-burger-menu";
+import { Button, Glyphicon } from "react-bootstrap";
 import "./css/menu.css";
 
 export class Navigation extends React.Component {
@@ -31,29 +31,28 @@ export class Navigation extends React.Component {
   render() {
     return (
       <Menu width={195}>
-      <Button bsSize="large" 
-        className="bm-menu-button"
-        active={this.state.pageSelected === "home"}
-        onSelected={this.onHomePageSelected}>
-        <Glyphicon glyph="home" /> Homepage
-      </Button>
-      <Button bsSize="large"
-        className="bm-menu-button"
-        active={this.state.pageSelected === "analyst"}
-        onSelected={this.onHomePageSelected}>
-        <Glyphicon glyph="list-alt" /> Analyst
-      </Button>
-      <Button bsSize="large"
-        className="bm-menu-button"
-        active={this.state.pageSelected === "fundamentals"}
-        onSelected={this.onHomePageSelected}>
-        <Glyphicon glyph="tasks" /> Fundamentals
-      </Button>
+        <Button
+          bsSize="large"
+          className="bm-menu-button"
+          active={this.state.pageSelected === "home"}
+        >
+          <Glyphicon glyph="home" /> Homepage
+        </Button>
+        <Button
+          bsSize="large"
+          className="bm-menu-button"
+          active={this.state.pageSelected === "analyst"}
+        >
+          <Glyphicon glyph="list-alt" /> Analyst
+        </Button>
+        <Button
+          bsSize="large"
+          className="bm-menu-button"
+          active={this.state.pageSelected === "fundamentals"}
+        >
+          <Glyphicon glyph="tasks" /> Fundamentals
+        </Button>
       </Menu>
     );
   }
 }
-
-
-
-
